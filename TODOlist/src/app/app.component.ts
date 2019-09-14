@@ -9,7 +9,7 @@ import { ApiService } from './api.service';
 })
 
 export class AppComponent   {
-  tasks = [{tarefa: 'teste 1'}];
+  tasks = [{tarefa: 'teste 1', completa: false}];
   selectedTask;
 
   constructor(private api: ApiService) {
