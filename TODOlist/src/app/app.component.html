@@ -1,11 +1,16 @@
+<body>
 <h2>List of TODOs</h2>
+<p>
 <ul>
   <li *ngFor = "let task of tasks">
-    <input  type="checkbox" > <h3>{{task.tarefa}}</h3>
-    <button (click)=" editarTarefa()" >Edit</button>
-    <button (click)=" deletarTarefa()">Delete </button>
+    <!--<input  type="checkbox" > -->
+      <h3>{{task.tarefa}}</h3>
+    <button (click)=" editarTarefa()" >Editar</button>
+    <button (click)=" deletarTarefa()">Deletar </button>
+    <button (click)=" concluirTarefa()">Concluir </button>
   </li><br>
-  <input [(ngModel)]="selectedTask.tarefa" type="text" >
   <hr><br>
+  <input [(ngModel)]="selectedTask.tarefa" type="text" >
   <button (click)="adicionarTarefa()">Add</button>
 </ul>
+</body>

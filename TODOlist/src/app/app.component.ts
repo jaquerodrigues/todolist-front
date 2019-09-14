@@ -55,6 +55,17 @@ export class AppComponent   {
     );
   }
 
+  concluirTarefa = () => {
+    this.api.deletarTarefa(this.selectedTask.id).subscribe(
+      data => {
+        this.getTasks();
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
+
 
 
 }
