@@ -21,9 +21,12 @@ getOneTask(id): Observable<any> {
   {headers: this.httpHeaders});
 }
 // fazer mais uma funçao tipo deletar para tarefa concluida
- adicionarTarefa(task): Observable<any> {
-    return this.http.post(this.baseurl + '/tasks', task.tarefa, {headers: this.httpHeaders} );
-    // mas essa aqui sim e mesmo assim nao funciona
+ adicionarTarefa(id): Observable<any> {
+     // return this.http.post(this.baseurl + '/tasks', task.tarefa, {headers: this.httpHeaders} );
+    // return this.http.post( 'http://127.0.0.1:8000/admin/api/task/add/',
+    // {headers: this.httpHeaders} );
+    return this.http.post(this.baseurl + '/tasks/' + id + '/',
+    {headers: this.httpHeaders});
   }
 
   editarTarefa(task): Observable<any> {
@@ -32,7 +35,7 @@ getOneTask(id): Observable<any> {
   }
 
   deletarTarefa(id): Observable<any> {
-      return this.http.delete(this.baseurl + '/tasks/' + id + '/', // essa página realmente nao existe
+      return this.http.delete(this.baseurl + '/tasks/' + id + '/',
       {headers: this.httpHeaders});
     }
 

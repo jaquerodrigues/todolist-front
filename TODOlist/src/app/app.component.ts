@@ -14,7 +14,7 @@ export class AppComponent   {
 
   constructor(private api: ApiService) {
     this.getTasks();
-    this.selectedTask = {id: -1, tarefa: '', completa: false};
+    this.selectedTask = {id: 7, tarefa: '', completa: false};
   }
 
   adicionarTarefa() {
