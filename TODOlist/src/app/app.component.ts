@@ -14,7 +14,8 @@ export class AppComponent   {
 
   constructor(private api: ApiService) {
     this.getTasks();
-    this.selectedTask = {id: 7, tarefa: '', completa: false};
+    this.selectedTask = {id: 6, tarefa: '', completa: false}; //se o id voltar para -1 que seria o original não funciona..
+    //404 Error aqui?
   }
 
   adicionarTarefa() {
